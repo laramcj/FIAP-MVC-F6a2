@@ -1,0 +1,104 @@
+package br.com.travellerfiap.entretenimento.servlet;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Banco {
+   
+	
+	static {
+		private List<Entretenimento> listaEntretenimento = new ArrayList<Entretenimento>();
+		private Integer chaveSequencial = 1;
+		
+		Entretenimento entretenimento1 = new Entretenimento();
+		entretenimento1.setNome("Teatro Municipal");
+		entretenimento1.setId(chaveSequencial++);
+		entretenimento1.setDescricao("Theatro Municipal, 110 anos de história só fazem sentido com você na plateia.");
+		entretenimento1.setLocalizacao("Praça Ramos de Azevedo, s/n - República, São Paulo - SP");
+		entretenimento1.setHorarioFuncionamento("Das 10h às 19h");
+		entretenimento1.setUrlSiteOficial("https://theatromunicipal.org.br/pt-br/");
+		entretenimento1.setAvaliacao(5);
+		
+		Entretenimento entretenimento2 = new Entretenimento();
+		entretenimento2.setNome("Bixiga");
+		entretenimento2.setId(chaveSequencial++);
+		entretenimento2.setDescricao("O Bixiga é entendido como um dos mais tradicionais bairros da cidade de São Paulo, embora na divisão administrativa da cidade ele não exista oficialmente como tal.");
+		entretenimento2.setLocalizacao("Bairro Bixiga, São Paulo - SP");
+		entretenimento2.setHorarioFuncionamento("todos os dias");
+		entretenimento2.setUrlSiteOficial("http://www.portaldobixiga.com.br/historia/");
+		entretenimento2.setAvaliacao(3);
+		
+		Entretenimento entretenimento3 = new Entretenimento();
+		entretenimento3.setNome("Praça Benedito Calixto");
+		entretenimento3.setId(chaveSequencial++);
+		entretenimento3.setDescricao("A Praça Benedito Calixto em Pinheiros é um importante polo cultural da cidade.");
+		entretenimento3.setLocalizacao("Praça Benedito Calixto - Pinheiros, São Paulo - SP");
+		entretenimento3.setHorarioFuncionamento("aos finais de semana");
+		entretenimento3.setUrlSiteOficial("https://www.instagram.com/feirabeneditocalixto.oficial/");
+		entretenimento3.setAvaliacao(5);
+		
+		Entretenimento entretenimento4 = new Entretenimento();
+		entretenimento4.setNome("Autódromo de Interlagos");
+		entretenimento4.setId(chaveSequencial++);
+		entretenimento4.setDescricao("Autódromo José Carlos Pace é um autódromo municipal localizado no distrito de Cidade Dutra, na cidade de São Paulo, Brasil. Pela proximidade com o bairro de Interlagos é popularmente chamado de Autódromo de Interlagos.");
+		entretenimento4.setLocalizacao("Av. Sen. Teotônio Vilela, 261 - Interlagos, São Paulo - SP,");
+		entretenimento4.setHorarioFuncionamento("todos os dias");
+		entretenimento4.setUrlSiteOficial("https://autodromodeinterlagos.com.br/");
+		entretenimento4.setAvaliacao(2);
+		
+		Entretenimento entretenimento5 = new Entretenimento();
+		entretenimento5.setNome("Escape 60");
+		entretenimento5.setId(chaveSequencial++);
+		entretenimento5.setDescricao("O Escape 60 é uma nova forma de entretenimento inteligente, agradável e diferente, voltada para famílias, amigos e equipes de trabalho.");
+		entretenimento5.setLocalizacao("Rua Henrique Schaumann, 717 - Pinheiros, São Paulo - SP");
+		entretenimento5.setHorarioFuncionamento("Das 10h às 22h");
+		entretenimento5.setUrlSiteOficial("https://escape60.com.br/unidades-escape60/sao-paulo-henrique-schaumann/");
+		entretenimento5.setAvaliacao(2);
+		
+		listaEntretenimento.add(entretenimento1);
+		listaEntretenimento.add(entretenimento2);
+		listaEntretenimento.add(entretenimento3);
+		listaEntretenimento.add(entretenimento4);
+		listaEntretenimento.add(entretenimento5);
+		
+	}
+
+	public List<Entretenimento> getEntretenimento() {
+		
+		return listaEntretenimento;
+	}
+
+	public void adiciona(Entretenimento entretenimento) {
+		
+		Entretenimento.add(entretenimento);
+		
+	}
+
+	public void removeEntretenimento(Integer id) {
+		
+		Iterator<Entretenimento> it = listaEntretenimento.iterator();
+		
+		while (it.hasNext()) {
+			Entretenimento entretenimento = (Entretenimento) it.next();
+			if(entretenimento.getId()==id) {
+				it.remove();
+			}
+			
+			
+		}
+		
+	}
+
+	public Entretenimento buscaPorId(Integer id) {
+		
+		for (Entretenimento entretenimento : listaEntretenimento) {
+			if(entretenimento.getId()==id) {
+				return entretenimento;
+			}
+		}
+		return null;
+		
+	}
+}
+   
+}

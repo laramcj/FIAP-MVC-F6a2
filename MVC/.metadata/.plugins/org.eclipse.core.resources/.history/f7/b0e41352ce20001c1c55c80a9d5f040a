@@ -1,0 +1,14 @@
+package br.com.travellerfiap.entretenimento.servlet;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Banco {
+   private List<Entretenimento> listaEntretenimento = new ArrayList<Entretenimento>();
+
+public List<Entretenimento> getEntretenimento() {
+	
+	return listaEntretenimento;
+}
+   
+}

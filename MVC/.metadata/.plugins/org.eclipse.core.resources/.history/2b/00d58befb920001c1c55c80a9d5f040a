@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="fiap-traveller-entretenimento">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <property name="context-root" value="fiap-traveller-entretenimento"/>
+        <property name="java-output-path" value="/fiap-traveller-entretenimento/build/classes"/>
+    </wb-module>
+</project-modules>

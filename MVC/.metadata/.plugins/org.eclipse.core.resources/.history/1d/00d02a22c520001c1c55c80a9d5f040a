@@ -1,0 +1,5 @@
+package br.com.travellerfiap.entretenimento.servlet;
+
+public class Entretenimento {
+
+}
